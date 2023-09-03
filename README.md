@@ -1,5 +1,5 @@
 
-# <a href="https://orsondewitt.com/birdmapp" target="_blank">BirdMApp</a>
+#  [BirdMApp](https://orsondewitt.com/birdmapp)
 
 BirdMApp is a tool to empower bird enthusiasts with high-level knowledge of their surroundings, best times and places to find certain species, and a convenient way to track their hobby.
 
@@ -20,23 +20,23 @@ BirdMApp is a tool to empower bird enthusiasts with high-level knowledge of thei
 
 ## Features & Use Cases
 
-BirdMApp allows to easily import all your photos, and, provided that they have tags with species names, prepares an in-depth analysis of your progress. Alternatively, you may upload any csv file with species names, for example, from eBird. Then, it's as simple as clicking "Sync" to update the statistics.
+BirdMApp allows to easily import all your photos, and, provided that they have tags with species names, prepares an in-depth analysis of your progress. Alternatively, you may upload any csv file with species names, for example, from eBird. Then, it's as simple as clicking "Sync" to update the data.
 
-See all species you are likely to encounter in any given region, in any given month; see how many you've already seen in any particular month, or overall.
+**See all species you are likely to encounter in any given region, in any given month**; see how many you've already seen in any particular month, or overall.
 Each region shows up as a convenient table that can serve as a checklist for your future trip; you can filter by month and group by family, as well as see each bird's photo, relative rarity and IUCN Red List category. It helps identify new lifers, too.
-https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/8fb76321-c708-4b3a-b0db-f41d6f3e27e7
+https://orsondewitt.com/assets/birdmapp/bird_map.mp4
 
-Rarity allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
+**Rarity** allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
 ![image](https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/a8f1406a-f183-464b-9e5e-6a849b024dc1)
-Note: Please report rarer species to ebird, inaturalist or any other service of your choice.
+*Note: Please report rarer species to ebird, inaturalist or any other service of your choice.*
 
-Plot all your observations on a map; see species distribution; track monthly migrations. The darker the area, the more likely you are to see the bird there. With more than 1 billion occurrences analyzed in the years 2011-2021 of more than 10000 species, the bird ranges are up-to-date and are not extrapolated or otherwise edited. If you do not see any records of a species in a particular region, then nobody has seen it there in the 11 years that have been looked at. It's up to you to make conclusions. 
-https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/f0eefa18-83a5-4dd6-81a0-643c1aed76e6
+**Plot all your observations on a map; see species distribution; track monthly migrations**. The darker the area, the more likely you are to see the bird there. With more than 1 billion occurrences analyzed in the years 2011-2021 of more than 10000 species, the bird ranges are up-to-date and are not extrapolated or otherwise edited. If you do not see any records of a species in a particular region, then nobody has seen it there in the 11 years that have been looked at. It's up to you to make conclusions. 
+https://orsondewitt.com/assets/birdmapp/bird_distribution.mp4
 
-Track your progress with charts. The insights you gather will take your bird-watching to the next level; knowing that you've seen all the marine or diurnal species in a region, or that you're most active in the summer months might mean you need to change your habits if you wish to discover more species. 
-https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/d17ad890-4031-4038-bd57-63786ee6433d
+**Track your progress with charts**. The insights you gather will take your bird-watching to the next level; knowing that you've seen all the marine or diurnal species in a region, or that you're most active in the summer months might mean you need to change your habits if you wish to discover more species. 
+https://orsondewitt.com/assets/birdmapp/bird_charts.mp4
 
-Additionally, use timeline at the bottom to filter observations and see how far you've come.
+Additionally, **use timeline** at the bottom to filter observations and see how far you've come.
 
 ## How it Works
 
@@ -132,4 +132,6 @@ The app is released under the GNU Affero General Public License version 3 (GNU A
 
 ## Need help?
 
-Reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
+If something doesn't work like it should, try closing the tab and then launching the application again.
+Additionally, you may want to delete *use.RData* from *app\shiny\userData*
+You may also reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
