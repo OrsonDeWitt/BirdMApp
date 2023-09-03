@@ -1,5 +1,5 @@
 
-# [BirdMApp](https://orsondewitt.com/birdmapp){:target="_blank"}
+# <a href="https://orsondewitt.com/birdmapp" target="_blank">BirdMApp</a>
 
 BirdMApp is a tool to empower bird enthusiasts with high-level knowledge of their surroundings, best times and places to find certain species, and a convenient way to track their hobby.
 
