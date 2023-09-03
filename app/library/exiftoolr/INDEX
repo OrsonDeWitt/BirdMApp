@@ -1,0 +1,6 @@
+configure_exiftoolr     Configure package to point to ExifTool and/or
+                        Perl
+exif_call               Call ExifTool from R
+exif_read               Read EXIF and other metadata from files
+install_exiftool        Install ExifTool, downloading (by default) the
+                        current version

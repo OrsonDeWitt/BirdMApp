@@ -1,0 +1,32 @@
+addLoader               Add CSS loaders from server
+animateAppend           Append animation to a Shiny element
+animateIcon             Font awesome animated icons
+animateUI               Add/remove animation to any HTML/shiny
+                        component
+bsAlert                 Bootstrap3 alert
+bsPopover               Enhanced Bootstrap3 popover
+bsTooltip               Enhanced Bootstrap3 tooltip
+clearableTextInput      A clearable text inputInput control
+cssLoader               Create a variety of CSS loaders on UI
+gallery                 A shiny gallery component
+heightMatcher           Match height of one element to the other
+                        element
+hexLogo                 Hexagon logo and logo panel
+hrefTab                 Display a list of links in a row of buttons
+hrefTable               A table of hyper reference buttons
+incRv                   In-line numeric operation for reactiveVal
+onNextInput             Wait for the next input change
+pgPaneUI                A draggable progress panel
+renderDesc              Render some collapsible markdown text
+shinyCatch              Shiny exception handling
+shinyCheckPkg           Shiny package checker
+spsCodeBtn              Display your code in a bootstrap modal or
+                        collapse
+spsDepend               Add commonly used HTML dependencies
+spsGoTop                Go top button
+spsHr                   Create a horizontal line
+spsTimeline             A shiny timeline component
+spsTitle                Colorful title element
+spsValidate             Validate expressions
+textButton              Text input with an action button
+textInputGroup          Bootstrap 3 text input group

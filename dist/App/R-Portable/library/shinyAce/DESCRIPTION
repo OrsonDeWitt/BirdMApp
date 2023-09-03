@@ -1,0 +1,34 @@
+Package: shinyAce
+Type: Package
+Title: Ace Editor Bindings for Shiny
+Version: 0.4.2
+Date: 2022-5-5
+Authors@R: c(
+  person("Vincent", "Nijs", role = c("aut", "cre"), email = "radiant@rady.ucsd.edu"),
+  person("Forest", "Fang", role = "aut", email = "forest.fang@outlook.com"),
+  person(family = "Trestle Technology, LLC", role = "aut", email = "cran@trestletechnology.net"),
+  person("Jeff", "Allen", role = "aut", email = "cran@trestletechnology.net"),
+  person(family = "Institut de Radioprotection et de Surete Nucleaire", role = c("cph"), email = "yann.richet@irsn.fr"),
+  person(family = "Ajax.org B.V.", role = c("ctb", "cph"), comment = "Ace"))
+Description: Ace editor bindings to enable a rich text editing environment
+    within Shiny.
+License: MIT + file LICENSE
+Depends: R (>= 3.3.0)
+Imports: shiny (>= 1.0.5), jsonlite, utils, tools
+Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
+BugReports: https://github.com/trestletech/shinyAce/issues
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Language: en-US
+NeedsCompilation: no
+Packaged: 2022-05-06 04:47:18 UTC; vnijs
+Author: Vincent Nijs [aut, cre],
+  Forest Fang [aut],
+  Trestle Technology, LLC [aut],
+  Jeff Allen [aut],
+  Institut de Radioprotection et de Surete Nucleaire [cph],
+  Ajax.org B.V. [ctb, cph] (Ace)
+Maintainer: Vincent Nijs <radiant@rady.ucsd.edu>
+Repository: CRAN
+Date/Publication: 2022-05-06 06:50:08 UTC
+Built: R 4.2.3; ; 2023-07-12 02:33:27 UTC; windows

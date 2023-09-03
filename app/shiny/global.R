@@ -1,0 +1,16 @@
+
+library(shiny)
+library(DT)
+library(tidyverse)
+library(shinyfilebrowser)
+library(shinybusy)
+library(leaflet)
+library(spsComps)
+library(shinyWidgets)
+library(plotly)
+spsDepend("basic")
+spsDepend("css-loader")
+
+#options(shiny.error = browser) 
+#options(shiny.trace=TRUE)
+#options(shiny.fullstacktrace=TRUE)

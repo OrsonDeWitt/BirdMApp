@@ -1,0 +1,23 @@
+Package: spsComps
+Title: 'systemPipeShiny' UI and Server Components
+Version: 0.3.3.0
+Date: 2023-07-10
+Authors@R: c(person(given = "Le", family = "Zhang", role = c("aut", "cre"), email = "lezhang100@gmail.com"))
+Description: The systemPipeShiny (SPS) framework comes with many UI and server components. However, installing the whole framework is heavy and takes some time. If you would like to use UI and server components from SPS in your own Shiny apps, do not hesitate to try this package.
+Depends: R (>= 4.0.0), shiny (>= 1.5.0)
+Imports: assertthat, stringr, glue (>= 1.4.0), magrittr, shinytoastr,
+        shinyAce, htmltools, utils, R6, crayon
+Suggests: testthat, shinyjqui, spsUtil (>= 0.2.0)
+License: GPL (>= 3)
+Encoding: UTF-8
+BugReports: https://github.com/lz100/spsComps/issues
+URL: https://github.com/lz100/spsComps
+RoxygenNote: 7.2.3
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2023-07-11 00:21:54 UTC; lab
+Author: Le Zhang [aut, cre]
+Maintainer: Le Zhang <lezhang100@gmail.com>
+Repository: CRAN
+Date/Publication: 2023-07-12 22:30:09 UTC
+Built: R 4.2.3; ; 2023-07-16 23:53:27 UTC; windows

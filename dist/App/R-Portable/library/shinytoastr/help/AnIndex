@@ -1,0 +1,5 @@
+toastr_error	toastr_success
+toastr_info	toastr_success
+toastr_success	toastr_success
+toastr_warning	toastr_success
+useToastr	useToastr

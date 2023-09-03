@@ -1,0 +1,29 @@
+Package: shinyfilebrowser
+Title: File Browser and List Selector for 'Shiny' Apps
+Version: 0.0.0.9012
+Authors@R: c(
+    person("Dean", "Attali",
+        email = "daattali@gmail.com",
+        role = c("aut", "cre"),
+        comment = c(ORCID="0000-0002-5645-3493")
+    ))
+Description: Display a simple file browser of the server-side file system in
+    'Shiny' apps. The file browser also supported "fake" file systems by
+    allowing you to browse any set of arbitrary paths, effectively allowing
+    you to navigate a tree structure. Finally, a list selector is also
+    available, allowing a user to select an item from a list.
+URL: https://github.com/daattali/shinyfilebrowser
+BugReports: https://github.com/daattali/shinyfilebrowser/issues
+Depends: R (>= 3.3.0)
+Imports: htmltools (>= 0.3.5), shiny (>= 1.5.0), stats, tools
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2023-06-19 17:25:02 UTC; Fureh
+Author: Dean Attali [aut, cre] (<https://orcid.org/0000-0002-5645-3493>)
+Maintainer: Dean Attali <daattali@gmail.com>
+Built: R 4.2.0; ; 2023-06-19 17:25:02 UTC; windows

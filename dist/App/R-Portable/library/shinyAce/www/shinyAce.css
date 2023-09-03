@@ -1,0 +1,56 @@
+.aceflash {
+  -moz-animation: aceflash 3s ease-out;
+  -moz-animation-iteration-count: infinite;
+  
+  -webkit-animation: aceflash 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  
+  -ms-animation: aceflash 3s ease-out;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes aceflash {
+  0% { border-color: #CCC;}
+  50% { border-color: #F88;}
+  100% { border-color: #CCC;}
+  }
+  
+@-moz-keyframes aceflash {
+  0% { border-color: #CCC;}
+  50% { border-color: #F88;}
+  100% { border-color: #CCC;}
+}
+  
+@-ms-keyframes aceflash {
+  0% { border-color: #CCC;}
+  50% { border-color: #F88;}
+  100% { border-color: #CCC;}
+}
+
+
+.ace_tooltip {
+  /* tools::Rd2HTML whitespace doesn't cause breaks, impose spacing */
+  white-space: normal; 
+  
+  max-width: 25em;
+  font-size: 85%;
+}
+
+pre .shinyAce_annotation {
+  margin: 0;
+  padding: 0.5em;
+  border: none;
+  background: none;
+  font-size: 100%;
+}
+
+.acealert {
+  border: 1px solid rgba(255, 50, 50, 0.60);
+}
+
+/* likely due to bootstrap css, font set to white
+with dark themes against a white background
+see https://github.com/ajaxorg/ace/issues/3071 */
+.ace_replace_form, .ace_search_field, .ace_replacebtn, .ace_searchbtn {
+  color: black;
+}

@@ -1,0 +1,40 @@
+.fname_regex            Regular expression for matching the function
+                        name in a completion line in the middle of a
+                        function call
+.tools                  Get namespace to get access to unexported
+                        functions, namely RdTags
+.utils                  Get namespace to get access to unexported
+                        functions, namely .getHelpFile
+                        .assignLinebuffer .assignEnd
+                        .guessTokenFromLine .completeToken
+aceAnnotate             Enable Error Annotations for an Ace Code Input
+aceAutocomplete         Enable Code Completion for an Ace Code Input
+aceEditor               Render Ace
+aceTooltip              Enable Completion Tooltips for an Ace Code
+                        Input
+build_tooltip_fields    Build the fields used to make an html tooltip
+getAceModes             Get available modes
+getAceThemes            Get available themes
+get_arg_help            Retrieve argument documentation from help
+                        document
+get_desc_help           Retrieve description section from help document
+get_help_file           Retrieve an Rd object of a help query
+get_usage_help          Retrieve usage section from help document
+is.empty                Check if vector is empty
+meta_obj                Character value to use for object meta field
+meta_pkg                Character value to use for package meta field
+r_completions_function_call_metadata
+                        R completions when cursor is within a function
+                        call
+r_completions_general_metadata
+                        R completions for general case
+r_completions_metadata
+                        Return completions for a given line of text
+rd_2_html               Convert an Rd object to HTML
+re_capture              Retrieve regular expression named capture
+                        groups as a list
+shinyAce-options        Options available for shinyAce
+shinyAce_debug          Function for handling optional debugging
+                        messages
+tooltip_html            A helper for formatting a tooltip entry
+updateAceEditor         Update Ace Editor
