@@ -24,6 +24,7 @@ BirdMApp allows to easily import all your photos, and, provided that they have t
 
 **See all species you are likely to encounter in any given region, in any given month**; see how many you've already seen in any particular month, or overall.
 Each region shows up as a convenient table that can serve as a checklist for your future trip; you can filter by month and group by family, as well as see each bird's photo, relative rarity and IUCN Red List category. It helps identify new lifers, too.
+
 https://orsondewitt.com/assets/birdmapp/bird_map.mp4
 
 **Rarity** allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
@@ -31,9 +32,11 @@ https://orsondewitt.com/assets/birdmapp/bird_map.mp4
 *Note: Please report rarer species to ebird, inaturalist or any other service of your choice.*
 
 **Plot all your observations on a map; see species distribution; track monthly migrations**. The darker the area, the more likely you are to see the bird there. With more than 1 billion occurrences analyzed in the years 2011-2021 of more than 10000 species, the bird ranges are up-to-date and are not extrapolated or otherwise edited. If you do not see any records of a species in a particular region, then nobody has seen it there in the 11 years that have been looked at. It's up to you to make conclusions. 
+
 https://orsondewitt.com/assets/birdmapp/bird_distribution.mp4
 
 **Track your progress with charts**. The insights you gather will take your bird-watching to the next level; knowing that you've seen all the marine or diurnal species in a region, or that you're most active in the summer months might mean you need to change your habits if you wish to discover more species. 
+
 https://orsondewitt.com/assets/birdmapp/bird_charts.mp4
 
 Additionally, **use timeline** at the bottom to filter observations and see how far you've come.
