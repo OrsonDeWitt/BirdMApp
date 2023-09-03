@@ -25,7 +25,9 @@ BirdMApp allows to easily import all your photos, and, provided that they have t
 **See all species you are likely to encounter in any given region, in any given month**; see how many you've already seen in any particular month, or overall.
 Each region shows up as a convenient table that can serve as a checklist for your future trip; you can filter by month and group by family, as well as see each bird's photo, relative rarity and IUCN Red List category. It helps identify new lifers, too.
 
-https://orsondewitt.com/assets/birdmapp/bird_map.mp4
+
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/1d929f8d-4c88-4bbc-9cf2-b7e263f3bb72
+
 
 **Rarity** allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
 ![image](https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/a8f1406a-f183-464b-9e5e-6a849b024dc1)
