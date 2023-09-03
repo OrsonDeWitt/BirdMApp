@@ -1,11 +1,11 @@
 
-# [BirdMApp](https://orsondewitt.com/birdmapp)
+# [BirdMApp](https://orsondewitt.com/birdmapp){:target="_blank"}
 
 BirdMApp is a tool to empower bird enthusiasts with high-level knowledge of their surroundings, best times and places to find certain species, and a convenient way to track their hobby.
 
 ## Table of Contents
 
-  - [Features & Use Cases](#features-and-use-cases)
+  - [Features & Use Cases](#features--use-cases)
   - [How it Works](#how-it-works)
   - [Installation](#installation)
   - [Import](#import)
@@ -24,17 +24,17 @@ BirdMApp allows to easily import all your photos, and, provided that they have t
 
 See all species you are likely to encounter in any given region, in any given month; see how many you've already seen in any particular month, or overall.
 Each region shows up as a convenient table that can serve as a checklist for your future trip; you can filter by month and group by family, as well as see each bird's photo, relative rarity and IUCN Red List category. It helps identify new lifers, too.
-[drag and drop videos]
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/8fb76321-c708-4b3a-b0db-f41d6f3e27e7
 
 Rarity allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
-(screenshot)
+![image](https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/a8f1406a-f183-464b-9e5e-6a849b024dc1)
 Note: Please report rarer species to ebird, inaturalist or any other service of your choice.
 
 Plot all your observations on a map; see species distribution; track monthly migrations. The darker the area, the more likely you are to see the bird there. With more than 1 billion occurrences analyzed in the years 2011-2021 of more than 10000 species, the bird ranges are up-to-date and are not extrapolated or otherwise edited. If you do not see any records of a species in a particular region, then nobody has seen it there in the 11 years that have been looked at. It's up to you to make conclusions. 
-[drag and rop]
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/f0eefa18-83a5-4dd6-81a0-643c1aed76e6
 
 Track your progress with charts. The insights you gather will take your bird-watching to the next level; knowing that you've seen all the marine or diurnal species in a region, or that you're most active in the summer months might mean you need to change your habits if you wish to discover more species. 
-[drag and rop]
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/d17ad890-4031-4038-bd57-63786ee6433d
 
 Additionally, use timeline at the bottom to filter observations and see how far you've come.
 
@@ -45,8 +45,11 @@ BirdMApp is a mostly self-contained Shiny application. Despite the fact that it 
 ### Installation
 
 No installation is required. Simply unzip the archive and run "BirdMApp.bat" from the root directory. The app is portable, which means you can copy it to a flash drive or another computer and use it anywhere without losing your data. 
+You may receive a warning from Windows that the file is from an unknown source. As far as I understand, this can be fixed by creating an installer and signing it, but it's just a (less) convenient wrapper for a zip archive, so I didn't bother (any advice from experienced developers is appreciated). 
 If you may want to put an icon on the desktop, the icon is included in the root folder, just change the path to wherever you put the app in. 
-Note: there must not be any non-Latin letters in the path. So if your computer's name has hieroglyphics, don't put it on Desktop (the full path to Desktop contains your user folder). Put it on C:/ or any other drive instead. 
+
+*Note #1: there must not be any non-Latin letters in the path. So if your computer's name has hieroglyphics, don't put it on Desktop (the full path to Desktop contains your user folder). Put it on C:/ or any other drive instead.*
+
 *Note #2: if running "BirdMApp.bat" does not open a new tab in your default browser, copy and replace the "config.cfg" file from "BirdMApp" folder to "BirdMApp/app"*
 
 ### Import
@@ -71,7 +74,7 @@ If some of the species are not imported ("tags could not be matched") but you th
 
 #### .csv (eBird)
 
-When importing a .csv file, it has to contain the following columns: "scientificName"/"scientific name"/"commonName"/"common name" (either of the 4), "latitude", "longitude", and "date". eBird provides this data to you in a csv format when going to "My eBird". Naturally, there will be no photos to plot, but you'll otherwise be able to see markers on the map, explore countries and see your statistics. 
+When importing a .csv file, it has to contain the following columns: "scientificName"/"scientific name"/"commonName"/"common name" (either of the 4), "latitude", "longitude", and "date". eBird provides this data to you in a .csv format when downloading your data from "My eBird". Naturally, there will be no photos to plot, but you'll otherwise be able to see markers on the map, explore countries and see your statistics. 
 
 ### Photo Ratings
 
@@ -80,15 +83,17 @@ If you choose "Use my photos in species lists" when importing, your photos will 
 ### Species Distribution
 
 For calculating relative abundance and determining which countries and areas have which species, I used all bird observations with coordinates from the years 2011-2021, provided by [GBIF](https://www.gbif.org/), which has data from eBird, iNaturalist, Xeno-Canto, Swedish Species Observation System, and others. I filtered out zero coordinates, duplicates and dubious records, as well as observations from a curated list of zoos and bird parks, and matched coordinates with the respective countries/areas. I then used weighted normalization to account for variance in sampling effort.
-I have set 0.033 relative abundance as the cut-off line for whether a species is present in a country/area or not, based on my own (subjective) experience out in the field. 
-In other words, if a bird species in an area has less than 3.3% of *weighted* abundance relative to the area with the most sightings, it is considered absent. This is done in order to make it clear which species are present where, so as not to be misled by, for example, hotspots in eBird that have 400+ reported bird species in a country with less than 200 total. 
-If somebody wanted to play around with these values, I might one day make it adjustable.  
+I set 0.033 relative abundance as the cut-off line for whether a species is present in a country/area or not, based on my own (subjective) experience out in the field. 
 
-### Rarity* 
+In other words, if a bird species in an area has less than 3.3% of *weighted* abundance relative to the area with the most sightings, it is considered absent. This is done in order to make it clear which species are present where, so as not to be misled by, for example, hotspots in eBird that have 400+ reported bird species in a country with less than 200 total. 
+
+If somebody wanted to play around with these values, I might be able to make it adjustable.  
+
+### Rarity
 
 Rarity allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. You may see the whole range of colors by clicking on India or nearly any other Asian country.
 
-* Rarity is based on number of unique recorded observations in the span of 11 years (2011-2021). If the species is recently-split, it might be falsely marked as rare. You may refer to IUCN Red List category for additional context.
+Rarity is based on number of unique recorded observations in the span of 11 years (2011-2021). If the species is recently-split, it might be falsely marked as rare. You may refer to IUCN Red List category for additional context.
 
 ### Map Layout
 
@@ -98,15 +103,17 @@ Similarly, leaving France (and other countries with overseas territories) with 1
 ## Limitations and Missing Species
 
 Taxonomies are not static. It might be that a species gets split into multiple, has its family revised, becomes extinct, and so on. Currently, BirdMApp concerns species that have at least a few observations in the years 2011 through 2021. This might change as more data becomes available for subsequent years.
-In the attached *missing birds.txt* file is the full list of species that are present in the 2022 HBW-BirdLife Handbook, but are excluded from BirdMApp (along with the reasoning). It currently contains about 500 bird species (~4.5% of all birds), most of which are newly-split by BirdLife, and have barely any observations to draw conclusions from (due to delays in taxonomy updates or disagreements with the changes.*). These have been sorted out manually, so I am sure there are plenty of birds that should and should not be in the list. Please let me know if you find errors.
+
+In the attached *missing birds.txt* file is the full list of species that are present in the 2022 HBW-BirdLife Handbook, but are excluded from BirdMApp (along with the reasoning). It currently contains about 500 bird species (~4.5% of all birds), most of which are newly-split by BirdLife, and have barely any observations to draw conclusions from (due to delays in taxonomy updates or disagreements with the changes*). These have been sorted out manually, so I am sure there are plenty of birds that should and should not be in the list. Please let me know if you find errors.
 Additionally, subspecies are not included, but I might explore this possibility in the future if there is enough interest. It's important to note, though, that subspecies are recorded rarely (as compared to species), and such analysis could not be as accurate.
 
-* It is likely that, unless you're a taxonomist, you would also call them by their old name or think of them as subspecies.
+*It is likely that, unless you're a taxonomist, you would also call them by their old name or think of them as subspecies.
 
 ## Tech Stack
 
 Front-end:
 Shiny, JavaScript, HTML, CSS
+
 DesktopDeployR (R package)
 
 Back-end:
@@ -114,6 +121,7 @@ R (refer to app/packages.txt for the packages used in BirdMApp)
 
 Data sources:
 GBIF (API & RGBIF), https://doi.org/10.15468/dl.mqbrn2 (18 July 2023)
+
 [Handbook of the Birds of the World Version 7.0 from December 2022](http://datazone.birdlife.org/species/taxonomy)
 
 The accompanying blog post for this project can be found [here](https://orsondewitt.com/posts/birdmapp-retrospective/).
@@ -124,4 +132,4 @@ The app is released under the GNU Affero General Public License version 3 (GNU A
 
 ## Need help?
 
-Reach out to on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
+Reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
