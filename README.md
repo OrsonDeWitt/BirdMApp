@@ -25,21 +25,21 @@ BirdMApp allows to easily import all your photos, and, provided that they have t
 **See all species you are likely to encounter in any given region, in any given month**; see how many you've already seen in any particular month, or overall.
 Each region shows up as a convenient table that can serve as a checklist for your future trip; you can filter by month and group by family, as well as see each bird's photo, relative rarity and IUCN Red List category. It helps identify new lifers, too.
 
-
 https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/1d929f8d-4c88-4bbc-9cf2-b7e263f3bb72
 
 
 **Rarity** allows you to judge at a glance how likely you are to see a species, and whether finding it requires preparation. The default sorting in country tables is by rarity; the darker the blue, the more ubiquitous the species; the darker the red, the more rare. 
+
 ![image](https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/a8f1406a-f183-464b-9e5e-6a849b024dc1)
-*Note: Please report rarer species to ebird, inaturalist or any other service of your choice.*
+*Note: The rarer the species, the more important it is that we report sightings of them on on eBird, iNaturalist, etc.*
 
 **Plot all your observations on a map; see species distribution; track monthly migrations**. The darker the area, the more likely you are to see the bird there. With more than 1 billion occurrences analyzed in the years 2011-2021 of more than 10000 species, the bird ranges are up-to-date and are not extrapolated or otherwise edited. If you do not see any records of a species in a particular region, then nobody has seen it there in the 11 years that have been looked at. It's up to you to make conclusions. 
 
-https://orsondewitt.com/assets/birdmapp/bird_distribution.mp4
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/945eea3b-7e46-47a2-926c-6b3e9e243b47
 
 **Track your progress with charts**. The insights you gather will take your bird-watching to the next level; knowing that you've seen all the marine or diurnal species in a region, or that you're most active in the summer months might mean you need to change your habits if you wish to discover more species. 
 
-https://orsondewitt.com/assets/birdmapp/bird_charts.mp4
+https://github.com/OrsonDeWitt/BirdMApp/assets/26813733/91e857a2-2034-4c74-a25e-6704bacb569e
 
 Additionally, **use timeline** at the bottom to filter observations and see how far you've come.
 
@@ -50,12 +50,12 @@ BirdMApp is a mostly self-contained Shiny application. Despite the fact that it 
 ### Installation
 
 No installation is required. Simply unzip the archive and run "BirdMApp.bat" from the root directory. The app is portable, which means you can copy it to a flash drive or another computer and use it anywhere without losing your data. 
+
 You may receive a warning from Windows that the file is from an unknown source. As far as I understand, this can be fixed by creating an installer and signing it, but it's just a (less) convenient wrapper for a zip archive, so I didn't bother (any advice from experienced developers is appreciated). 
+
 If you may want to put an icon on the desktop, the icon is included in the root folder, just change the path to wherever you put the app in. 
 
-*Note #1: there must not be any non-Latin letters in the path. So if your computer's name has hieroglyphics, don't put it on Desktop (the full path to Desktop contains your user folder). Put it on C:/ or any other drive instead.*
-
-*Note #2: if running "BirdMApp.bat" does not open a new tab in your default browser, copy and replace the "config.cfg" file from "BirdMApp" folder to "BirdMApp/app"*
+*Note: there must not be any non-Latin characters in the path. So if your computer's name has hieroglyphics, don't put it on desktop (the full path to desktop contains your computer name). Put it on C:/ or any other drive instead.*
 
 ### Import
 
@@ -137,6 +137,7 @@ The app is released under the GNU Affero General Public License version 3 (GNU A
 
 ## Need help?
 
-If something doesn't work like it should, try closing the tab and then launching the application again.
-Additionally, you may want to delete *use.RData* from *app\shiny\userData*
-You may also reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
+ - If running "BirdMApp.bat" does not open a pop-up with progress bar, gives you an error or just does not open a new tab in your default browser, copy and replace the *config.cfg* file from *BirdMApp* folder to *BirdMApp/app* and try again
+ - If your app is running but something doesn't work like it should, try closing the tab and then launching the application again.
+ - If an issue persists, you may want to delete *use.RData* from *app\shiny\userData* and import your data again.
+Alternatively, you may reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
