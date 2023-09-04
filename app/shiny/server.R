@@ -1,8 +1,8 @@
 
 
-####                                  BirdMApp v1.0                                      ####
-#                                 (c) 2023 Orson De Witt                                    #
-####                             https://orsondewitt.com                                 ####
+####                                    BirdMApp v1.0                                        ####
+#                                   (c) 2023 Orson De Witt                                      #
+####                               https://orsondewitt.com                                   ####
 
 server <- function(input, output, session) {
   
@@ -11,9 +11,9 @@ server <- function(input, output, session) {
   photoDir <- reactiveVal(NULL)
   observe({ photoDir <- "" })
   
-  ####                                                                                    ####
-  #                                    Data Import System                                    #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                   Data Import System                                         #
+  ####                                                                                        ####
   
   varPath <- getwd()
   addResourcePath("wd", varPath)
@@ -297,9 +297,9 @@ server <- function(input, output, session) {
     dataInput()
   })
   
-  ####                                                                                    ####
-  #                                      Data Import                                         #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                        Data Import                                           #
+  ####                                                                                        ####
   
   
   dataInput <- function(){
@@ -362,9 +362,9 @@ server <- function(input, output, session) {
     show_modal_gif(src = "wd/loading_bird.gif", modal_size = "s", text = "We're almost done.")
     
     
-    ####                                                                                    ####
-    #                                     Data Cleaning                                        #
-    ####                                                                                    ####
+    ####                                                                                        ####
+    #                                       Data Cleaning                                          #
+    ####                                                                                        ####
     
     
     # Calculate amount of columns required to separate Subject (# of comma-separated values)
@@ -521,9 +521,9 @@ server <- function(input, output, session) {
       }
     }
     
-    ####                                                                                    ####
-    #                                      Data Analysis                                       #
-    ####                                                                                    ####
+    ####                                                                                        ####
+    #                                        Data Analysis                                         #
+    ####                                                                                        ####
     
     
     # Load the database for analysis
@@ -733,15 +733,17 @@ server <- function(input, output, session) {
     }
     
     print("Merging names for Search function")
-    Searchlist <<- data.table(name = c(BirdList_Final$name, BirdList_Final$scientificName, BirdList_Final$synsLatin, BirdList_Final$synEn1, BirdList_Final$synEn2, BirdList_Final$synEn3, BirdList_Final$synEn4)) %>% filter(name != "", name != is.na(name))
+    Searchlist <<- data.table(name = c(BirdList_Final$name, BirdList_Final$scientificName, 
+                                       BirdList_Final$synsLatin, BirdList_Final$synEn1, BirdList_Final$synEn2, 
+                                       BirdList_Final$synEn3, BirdList_Final$synEn4)) %>% filter(name != "", name != is.na(name))
     
     # Create a shorter list from database with only the seen species
     Discovered <<- BirdList_Final %>% filter(Discovered == TRUE)
     
     
-    ####                                                                                    ####
-    #                                        Map Prep                                          #
-    ####                                                                                    ####
+    ####                                                                                        ####
+    #                                           Map Prep                                           #
+    ####                                                                                        ####
 
     
     library(sf)
@@ -820,9 +822,9 @@ server <- function(input, output, session) {
     }
     
     
-    ####                                                                                    ####
-    #                                       Map Render                                         #
-    ####                                                                                    ####
+    ####                                                                                        ####
+    #                                          Map Render                                          #
+    ####                                                                                        ####
     
     
     createLeaflet()
@@ -958,9 +960,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                       Map Filters                                        #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                          Map Filters                                         #
+  ####                                                                                        ####
   
   
   
@@ -1027,9 +1029,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                   Country Modal Prep                                     #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                       Country Modal Prep                                     #
+  ####                                                                                        ####
   
   
   
@@ -1187,9 +1189,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                     Country Modal                                        #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                         Country Modal                                        #
+  ####                                                                                        ####
   
   
 
@@ -1257,9 +1259,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                       Month Filter                                       #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                          Month Filter                                        #
+  ####                                                                                        ####
   
   
 
@@ -1300,9 +1302,9 @@ server <- function(input, output, session) {
 
   
   
-  ####                                                                                    ####
-  #                                         Timeline                                         #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                            Timeline                                          #
+  ####                                                                                        ####
   
   
   
@@ -1398,9 +1400,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                     Distribution Map                                     #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                        Distribution Map                                      #
+  ####                                                                                        ####
   
   
   
@@ -1582,9 +1584,9 @@ server <- function(input, output, session) {
   
   
   
-  ####                                                                                    ####
-  #                                         Charts                                           #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                            Charts                                            #
+  ####                                                                                        ####
   
   
   
@@ -1646,9 +1648,9 @@ server <- function(input, output, session) {
       
       tempPhotoList <- separate(photoList, YearMonthDay, sep = "-", into = c("year", "month", "day"))
       
-      ####                                                                                ####
-      #                                      Histogram                                       #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                          Histogram                                       #
+      ####                                                                                    ####
       
       BirdList_Nocturnal <<- BirdList_Final %>% filter(nocturnal == TRUE)
       BirdList_Terrestrial <<- BirdList_Final %>% filter(Terrestrial == TRUE)
@@ -1714,9 +1716,9 @@ server <- function(input, output, session) {
       })
       
       
-      ####                                                                                ####
-      #                                    General Table                                     #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                       General Table                                      #
+      ####                                                                                    ####
       
       
       userStats <- userStats %>% 
@@ -1753,9 +1755,9 @@ server <- function(input, output, session) {
       })
       
       
-      ####                                                                                ####
-      #                                      Line Chart                                      #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                         Line Chart                                       #
+      ####                                                                                    ####
       
       
       MonthlyStats <- photoList %>% arrange(YearMonth)
@@ -1842,9 +1844,9 @@ server <- function(input, output, session) {
       #               x = 0.5))
       
       
-      ####                                                                                ####
-      #                                       Calendar                                       #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                         Calendar                                         #
+      ####                                                                                    ####
       
       
       calendarList <- tempPhotoList %>% count(month, day)
@@ -1919,9 +1921,9 @@ server <- function(input, output, session) {
       })
       
       
-      ####                                                                                ####
-      #                                       Tree Map                                       #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                          Tree Map                                        #
+      ####                                                                                    ####
       
       
       tempPhotoList <- tempPhotoList %>% mutate(Species = str_to_title(Species))
@@ -1959,9 +1961,9 @@ server <- function(input, output, session) {
       })
       
 
-      ####                                                                                ####
-      #                                     Families Tab                                     #
-      ####                                                                                ####
+      ####                                                                                    ####
+      #                                        Families Tab                                      #
+      ####                                                                                    ####
       
       
       familiesList <- BirdList_Final %>% count(Family)
@@ -2068,9 +2070,9 @@ server <- function(input, output, session) {
 
   
   
-  ####                                                                                    ####
-  #                                   UI: Menu Observers                                     #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                       UI: Menu Observers                                     #
+  ####                                                                                        ####
 
   
   
@@ -2189,9 +2191,9 @@ server <- function(input, output, session) {
         select(-name, -DateTimeOriginal) %>% # Remove the column created from pivoting + old date
         filter(!(`Animal Class` != "Bird" & !(is.na(`Animal Class`))))
       
-      ####                                                                                    ####
-      #                                      Data Analysis                                       #
-      ####                                                                                    ####
+      ####                                                                                        ####
+      #                                        Data Analysis                                         #
+      ####                                                                                        ####
       
       # Load the database for analysis
       BirdList <- readRDS(file = paste0(varPath,"/bin/Bi.rds"))
@@ -2369,9 +2371,9 @@ server <- function(input, output, session) {
       # Create a shorter list from database with only the seen species
       Discovered <<- BirdList_Final %>% filter(Discovered == TRUE)
   
-      ####                                                                                    ####
-      #                                      Leaflet Prep                                        #
-      ####                                                                                    ####
+      ####                                                                                        ####
+      #                                         Leaflet Prep                                         #
+      ####                                                                                        ####
       
       library(sf)
     
@@ -2476,9 +2478,9 @@ server <- function(input, output, session) {
   })
   
   
-  ####                                                                                    ####
-  #                                 Import Warning Modals                                    #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                    Import Warning Modals                                     #
+  ####                                                                                        ####
   
   
   
@@ -2615,9 +2617,9 @@ server <- function(input, output, session) {
     }
   }
   
-  ####                                                                                    ####
-  #                                          Misc                                            #
-  ####                                                                                    ####
+  ####                                                                                        ####
+  #                                            Misc                                              #
+  ####                                                                                        ####
   
   # Set GB locale so everything is consistent
   Sys.setlocale (category = "LC_TIME", locale = "en_GB.UTF-8")
@@ -2628,9 +2630,9 @@ server <- function(input, output, session) {
   m <- 0
 
   #Terminate the process
-  session$onSessionEnded(function() {
-    stopApp()
-  })
+  # session$onSessionEnded(function() {
+  #   stopApp()
+  # })
 
 }
 
