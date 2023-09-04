@@ -1,5 +1,0 @@
-configure_exiftoolr	configure_exiftoolr
-exif_call	exif_call
-exif_read	exif_read
-exif_version	exif_call
-install_exiftool	install_exiftool
