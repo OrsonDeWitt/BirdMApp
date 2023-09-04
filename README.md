@@ -75,15 +75,15 @@ After that, the tags are compared to an internal bird list — semi-manual edit 
 
 When the import is finished (it takes less than 5 minutes for <1000 photos and about 20 minutes for ~6000), you will see a nicely formatted table that will list all the errors that might have occurred during the import, so you can use this to see which photos are missing tags or locations, and fix them.
 
-If some of the species are not imported ("tags could not be matched") but you think they should have been, let me know, it might be that a synonym has to be added; or you may check "missing_birds.txt", it might be there (see "Limitations and Missing Species").
+If some of the species are not imported ("tags could not be matched") but you think they should have been, let me know, it might be that a synonym has to be added; or you may check *missing_birds.txt*, it might be there (see [Limitations and Missing Species](#limitations-and-missing-species)).
 
 #### .csv (eBird)
 
-When importing a .csv file, it has to contain the following columns: "scientificName"/"scientific name"/"commonName"/"common name" (either of the 4), "latitude", "longitude", and "date". eBird provides this data to you in a .csv format when downloading your data from "My eBird". Naturally, there will be no photos to plot, but you'll otherwise be able to see markers on the map, explore countries and see your statistics. 
+When importing a .csv file, it has to contain the following columns: *scientificName/scientific name/commonName/common name* (either of the 4), *latitude*, *longitude*, and *date*. eBird provides this data to you in a .csv format when downloading your data from "My eBird". Naturally, there will be no photos to plot, but you'll otherwise be able to see markers on the map, explore countries and see your statistics. 
 
 ### Photo Ratings
 
-If you choose "Use my photos in species lists" when importing, your photos will show up in country lists and on the tree map in the "charts" panel. Which photo is chosen depends on the rating of the photo. If neither of the photos have rating, the newest photo will be chosen.
+If you check "Use my photos in species lists" when importing, your photos will show up in country lists and on the tree map in the "charts" panel. Which photo is chosen depends on the rating of the photo. If neither of the photos have rating, the newest photo will be chosen.
 
 ### Species Distribution
 
@@ -112,19 +112,24 @@ Taxonomies are not static. It might be that a species gets split into multiple, 
 In the attached *missing birds.txt* file is the full list of species that are present in the 2022 HBW-BirdLife Handbook, but are excluded from BirdMApp (along with the reasoning). It currently contains about 500 bird species (~4.5% of all birds), most of which are newly-split by BirdLife, and have barely any observations to draw conclusions from (due to delays in taxonomy updates or disagreements with the changes*). These have been sorted out manually, so I am sure there are plenty of birds that should and should not be in the list. Please let me know if you find errors.
 Additionally, subspecies are not included, but I might explore this possibility in the future if there is enough interest. It's important to note, though, that subspecies are recorded rarely (as compared to species), and such analysis could not be as accurate.
 
-*It is likely that, unless you're a taxonomist, you would also call them by their old name or think of them as subspecies.
+**Or a million other reasons that we just have to accept*
 
 ## Tech Stack
 
-Front-end:
+##### Front-end
+
 Shiny, JavaScript, HTML, CSS
 
 DesktopDeployR (R package)
 
-Back-end:
+##### Back-end
+
 R (refer to app/packages.txt for the packages used in BirdMApp)
 
-Data sources:
+ExifTool
+
+##### Data sources
+
 GBIF (API & RGBIF), https://doi.org/10.15468/dl.mqbrn2 (18 July 2023)
 
 [Handbook of the Birds of the World Version 7.0 from December 2022](http://datazone.birdlife.org/species/taxonomy)
