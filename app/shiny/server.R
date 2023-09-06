@@ -1,12 +1,12 @@
 
 
-####                                    BirdMApp v1.0                                        ####
+####                                   BirdMApp v1.0.1                                        ####
 #                                   (c) 2023 Orson De Witt                                      #
 ####                               https://orsondewitt.com                                   ####
 
 server <- function(input, output, session) {
   
-  print("BirdMApp v1.0")
+  print("BirdMApp v1.0.1")
   library(data.table)
   photoDir <- reactiveVal(NULL)
   observe({ photoDir <- "" })
@@ -223,7 +223,7 @@ server <- function(input, output, session) {
   csvModal <- function(){
     photoDir <- ""
     photoList <<- data.table()
-    filebrowser <- file_browser_server("files", path = "~", root = reactive(input$drive),
+    filebrowser <- file_browser_server("files", path = path, root = reactive(input$drive),
                                        extensions = "csv",
                                        show_size = TRUE,
                                        include_hidden = FALSE,
@@ -271,6 +271,7 @@ server <- function(input, output, session) {
                      outline = TRUE))
           ),
         uiOutput("picker"),
+        uiOutput("datepicker"),
         
         # Folder selection
         tags$div(
@@ -280,6 +281,25 @@ server <- function(input, output, session) {
         footer = actionButton("CSVChosen", "OK")
       ))
   }
+
+    output$datepicker <- renderUI({
+      div(style = "display: inline-block; margin-top: 8px; width: 90%;", 
+          HTML('You have to choose the date format of your "date" column.'),
+          div(
+            style = "display: flex; margin-top: 10px; justify-content:space-between; margin-right: 25%",
+            pickerInput(
+              inputId = "dateformat",
+              selected = "",
+              label = NULL,
+              choices = list(
+                "Select one" = c(""),
+                formats = c("%d.%m.%y", "%m.%d.%y", "%y.%m.%d", "%y.%d.%m", "%d.%y.%m", "%d-%m-%y", 
+                            "%d-%y-%m", "%m-%d-%y", "%m-%y-%d", "%y-%m-%d", "%y-%d-%m", "%d/%m/%y", 
+                            "%d/%y/%m", "%y/%m/%d", "%y/%d/%m", "%m-%d-%y")
+              ),
+              multiple = FALSE
+      )))
+  })
 
   observeEvent(input$PathChosen, {
     # Isolating the variable
@@ -313,10 +333,10 @@ server <- function(input, output, session) {
     Warning_AThrush <<- 0
     error <<- ""
     
-    print(paste0("Beginning analysis with the following settings,<br> Zoo:", 
-                 input$zoo, "<br>Replace names:", input$replaceNames, 
-                 "<br>Names:", input$Id000, "<br>Common:", input$Common, 
-                 "<br>Photos:", input$usePhotos, "<br>Adjectives:", input$Regional))
+    print(paste0("Beginning analysis with custom settings. Zoo:", 
+                 input$zoo, "; Replace names:", input$replaceNames, 
+                 "; Names:", input$Id000, "; Common:", input$Common, 
+                 "; Photos:", input$usePhotos, "; Adjectives:", input$Regional))
     
     # If there is an error when choosing directory/file
     if (is_null(csvFile) & photoDir == ""){
@@ -446,10 +466,11 @@ server <- function(input, output, session) {
     
     # CSV loading and clean-up
     } else { # if CSV exists
+      print(paste0("date format:", input$dateformat))
       inputUserPhotos <<- FALSE
       inputZoo <<- FALSE
       image_files <<- FALSE
-      photoList <<- fread(csvFile, fill = TRUE)
+      photoList <<- read_csv(csvFile)
       nrow_for_warnings <<- nrow(photoList)
       colnames(photoList) <<- tolower(colnames(photoList))
       colnames(photoList) <<- str_remove_all(colnames(photoList)," ")
@@ -2629,10 +2650,10 @@ server <- function(input, output, session) {
   inpSpecies <- ""
   m <- 0
 
-  #Terminate the process
-  # session$onSessionEnded(function() {
-  #   stopApp()
-  # })
+  # Terminate the process
+  session$onSessionEnded(function() {
+    stopApp()
+  })
 
 }
 
