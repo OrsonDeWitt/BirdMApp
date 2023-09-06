@@ -501,8 +501,6 @@ server <- function(input, output, session) {
           if (exists("latitude", where = photoList)){
             if (exists("longitude", where = photoList)){
               if (exists("date", where = photoList)){
-                photoList <<- photoList %>%
-                  mutate(date = ymd(date, quiet = TRUE))
                 if (exists("time", where = photoList)){
                   photoList <<- photoList %>% select(commonname, latitude, longitude, date, time)
                   photoList <<- photoList %>%
@@ -522,7 +520,7 @@ server <- function(input, output, session) {
       if (error == ""){
         photoList <<- photoList %>%
           rename(GPSLongitude = longitude, GPSLatitude = latitude) %>% 
-          mutate(YearMonthDay = as.POSIXct(date, format = "%Y:%m:%d"),
+          mutate(YearMonthDay = as.POSIXct(date, format = input$dateformat),
                  YearMonth = format(YearMonthDay, "%Y-%m"),
                  YearMonthDay = format(YearMonthDay, "%Y-%m-%d")) %>%
           arrange(YearMonthDay)
