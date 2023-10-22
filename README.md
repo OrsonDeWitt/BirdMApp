@@ -142,4 +142,4 @@ The app is released under the GNU Affero General Public License version 3 (GNU A
  - If running "BirdMApp.bat" does not open a pop-up with progress bar, gives you an error or just does not open a new tab in your default browser, copy and replace the *config.cfg* file from *BirdMApp* folder to *BirdMApp/app* and try again
  - If your app is running but something doesn't work like it should, try closing the tab and then launching the application again.
  - If an issue persists, you may want to delete *use.RData* from *app\shiny\userData* and import your data again.
-Alternatively, you may reach out to me on [Discord](https://discord.com/invite/c48wxW4rer), or open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
+Alternatively, you may open an issue on [Github](https://github.com/OrsonDeWitt/BirdMApp/issues). I'll be happy to help.
